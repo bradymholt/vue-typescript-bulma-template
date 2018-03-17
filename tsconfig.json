@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "outDir": "dist/",
+    "sourceMap": false,
+    "strict": true,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "target": "es5",
+    "experimentalDecorators": true
+  },
+  "files": [
+    "./src/boot.ts"
+  ],
+  "include": [
+    "./src/*.d.ts"
+  ]
+}
