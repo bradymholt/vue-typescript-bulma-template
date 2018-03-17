@@ -5,7 +5,7 @@
         {{ msg }}
       </h1>
       <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
+        This Vue.js app has TypeScript support and is using the <strong>Bulma</strong> CSS framework.
       </p>
     </div>
   </section>
@@ -17,11 +17,6 @@ import { Vue, Component, Prop } from "vue-property-decorator";
 @Component
 export default class HelloWord extends Vue {
   msg = "Welcome to Your Vue.js App";
-
-  created() {
-    let num = 0;
-    num += 10;
-  }
 }
 </script>
 
