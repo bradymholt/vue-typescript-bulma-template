@@ -130,7 +130,7 @@ const config = {
     compress: true,
     port: 8080,
     overlay: { warnings: false, errors: true },
-    quiet: false // necessary for FriendlyErrorsPlugin
+    quiet: true // necessary for FriendlyErrorsPlugin
   },
   node: {
     // prevent webpack from injecting useless setImmediate polyfill because Vue
