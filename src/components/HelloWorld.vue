@@ -1,14 +1,19 @@
 <template>
- <section class="section">
-    <div class="container">
-      <h1 class="title">
-        {{ msg }}
-      </h1>
-      <p class="subtitle">
-        This Vue.js app has TypeScript support and is using the <strong>Bulma</strong> CSS framework.
-      </p>
-    </div>
-  </section>
+  <div>
+    <h1 class="title is-spaced">
+      {{ msg }}
+    </h1>
+    <p class="subtitle">
+      This Vue.js app has
+      <a href="http://www.typescriptlang.org/">TypeScript</a> support,<br/> is using the
+      <a href="https://bulma.io/">Bulma CSS framework</a>
+      <span class="tag is-success">Success</span> <span class="tag is-warning">Warning</span>,<br/> and pulls in
+      <a href="https://fontawesome.com/">Font Awesome</a>
+      <i class="fas fa-user"></i>
+      <i class="fas fa-check"></i>
+      <i class="fas fa-download"></i>.
+    </p>
+  </div>
 </template>
 
 <script lang="ts">
@@ -21,19 +26,7 @@ export default class HelloWord extends Vue {
 </script>
 
 <style lang="scss" scoped>
-h1,
-h2 {
-  font-weight: normal;
-}
 ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+  list-style-position: inside;
 }
 </style>

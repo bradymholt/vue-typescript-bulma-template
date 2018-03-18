@@ -62,7 +62,7 @@ config.plugins = [
   }),
   new PrerenderSpaPlugin(
     // Absolute path to compiled SPA
-    path.join(__dirname, "dist"),
+    path.join(__dirname, "docs"),
     // List of routes to prerender
     ["/"]
   )
