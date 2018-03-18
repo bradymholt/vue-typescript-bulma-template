@@ -38,7 +38,6 @@ config.plugins = [
   // generate all css to a file and add reference to it
   new ExtractTextPlugin({
     filename: "[name].[contenthash].css",
-    allChunks: true
   }),
   // compress extracted CSS. We are using this plugin so that possible
   // duplicated CSS from different components can be deduped.
