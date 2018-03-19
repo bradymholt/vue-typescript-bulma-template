@@ -3,7 +3,6 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const FriendlyErrorsPlugin = require("friendly-errors-webpack-plugin");
 
 const srcDir = path.join(__dirname, "src");
 
@@ -102,11 +101,6 @@ const config = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new FriendlyErrorsPlugin({
-      compilationSuccessInfo: {
-        messages: [`Your application is running here: http://localhost:8080`]
-      }
-    }),
     new ExtractTextPlugin({
       disable: true
     }),
@@ -131,8 +125,7 @@ const config = {
     hot: true,
     compress: true,
     port: 8080,
-    overlay: { warnings: false, errors: true },
-    quiet: true // necessary for FriendlyErrorsPlugin
+    overlay: { warnings: false, errors: true }
   },
   node: {
     // prevent webpack from injecting useless setImmediate polyfill because Vue
