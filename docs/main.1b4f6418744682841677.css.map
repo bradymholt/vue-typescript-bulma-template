@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.1b4f6418744682841677.css"],"names":[],"mappings":"AACA,eACE,6CAAoD,CACrD,AAED,oBACE,0BAA4B,CAC7B","file":"main.1b4f6418744682841677.css","sourcesContent":["\n#app-container {\n  font-family: \"Avenir\", Helvetica, Arial, sans-serif;\n}\n\nul[data-v-469af010] {\n  list-style-position: inside;\n}\n"]}

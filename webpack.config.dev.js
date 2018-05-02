@@ -15,7 +15,7 @@ const config = {
   output: {
     path: path.join(__dirname, "docs"),
     filename: "[name].js",
-    publicPath: "/vue-typescript-bulma-template"
+    publicPath: "/"
   },
   module: {
     rules: [
