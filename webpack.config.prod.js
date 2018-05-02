@@ -2,6 +2,7 @@ const webpack = require("webpack");
 const path = require("path");
 const package = require("./package.json");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const { VueLoaderPlugin } = require("vue-loader");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
 const OptimizeCSSPlugin = require("optimize-css-assets-webpack-plugin");
@@ -35,9 +36,11 @@ config.plugins = [
       NODE_ENV: `"${config.mode}"`
     }
   }),
+  new VueLoaderPlugin(),
   // generate all css to a file and add reference to it
   new ExtractTextPlugin({
-    filename: "[name].[contenthash].css",
+    filename: "[name].[hash].css",
+    allChunks: true
   }),
   // compress extracted CSS. We are using this plugin so that possible
   // duplicated CSS from different components can be deduped.
@@ -59,12 +62,12 @@ config.plugins = [
   new ScriptExtHtmlWebpackPlugin({
     defaultAttribute: "defer"
   }),
-  new PrerenderSpaPlugin(
+  new PrerenderSpaPlugin({
     // Absolute path to compiled SPA
-    path.join(__dirname, "docs"),
+    staticDir: path.join(__dirname, "docs"),
     // List of routes to prerender
-    ["/"]
-  )
+    routes: ["/"]
+  })
 ];
 
 module.exports = config;
